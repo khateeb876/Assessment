@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "187c1d74-1c95-4773-96f0-bf531454fab8",
+		"name": "Assessment Apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12908583",
+		"_collection_link": "https://dark-comet-805883.postman.co/workspace/New-Team-Workspace~67ce629f-e864-4093-acca-1ec12e8fc567/collection/12908583-187c1d74-1c95-4773-96f0-bf531454fab8?action=share&source=collection_link&creator=12908583"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"khateeb\", \r\n    \"password\": \"12345678\",\r\n    \"user_login\" : \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/apis/apis.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"apis",
+						"apis.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Dish",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyLWFwcCIsImlhdCI6MTY5OTMzOTE4MiwiZXhwIjoxNjk5MzQyNzgyLCJ1c2VyX2lkIjoiMSJ9.YEVYQODqqBpa-M-HnOV-mm9hBRCDe6km9IF7Qy7S_Kk\",\r\n    \"name\" : \"Malai Kofta\",\r\n    \"description\" : \"This North Indian comfort food is made with kofta, fried potato-paneer dumplings, served in a rich, creamy sauce. The dumplings can come in a variety of sizes with either a lightly colored cream sauce or a spicier orange curry with tomatoes and red chilies.\",\r\n    \"price\" : 12,\r\n    \"create_dish\" : \"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/apis/apis.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"apis",
+						"apis.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Dish",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyLWFwcCIsImlhdCI6MTY5OTMzOTE4MiwiZXhwIjoxNjk5MzQyNzgyLCJ1c2VyX2lkIjoiMSJ9.YEVYQODqqBpa-M-HnOV-mm9hBRCDe6km9IF7Qy7S_Kk\",\r\n    \"dishid\" : 13,\r\n    \"delete_dish\" : \"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/apis/apis.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"apis",
+						"apis.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Dish",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyLWFwcCIsImlhdCI6MTY5OTMzOTE4MiwiZXhwIjoxNjk5MzQyNzgyLCJ1c2VyX2lkIjoiMSJ9.YEVYQODqqBpa-M-HnOV-mm9hBRCDe6km9IF7Qy7S_Kk\",\r\n    \"name\" : \"Update Dish Test 1111116.\",\r\n    \"description\" : \"Update Dish Description111111.\",\r\n    \"price\" : 350,\r\n    \"dishid\" : 13,\r\n    \"update_dish\" : \"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/apis/apis.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"apis",
+						"apis.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Dishes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyLWFwcCIsImlhdCI6MTY5OTMzOTE4MiwiZXhwIjoxNjk5MzQyNzgyLCJ1c2VyX2lkIjoiMSJ9.YEVYQODqqBpa-M-HnOV-mm9hBRCDe6km9IF7Qy7S_Kk\",\r\n    \"per_page\" : 10,\r\n    \"get_dishes\" : \"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/apis/apis.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"apis",
+						"apis.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Dishes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyLWFwcCIsImlhdCI6MTY5OTMzOTE4MiwiZXhwIjoxNjk5MzQyNzgyLCJ1c2VyX2lkIjoiMSJ9.YEVYQODqqBpa-M-HnOV-mm9hBRCDe6km9IF7Qy7S_Kk\",\r\n    \"name\" : \"Chicken\",\r\n    \"per_page\" : 10,\r\n    \"search_dishes\" : \"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/apis/apis.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"apis",
+						"apis.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Give Rating",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5b3VyLWFwcCIsImlhdCI6MTY5OTM0MzMxNSwiZXhwIjoxNjk5MzQ2OTE1LCJ1c2VyX2lkIjoiMSJ9.r9XfLoQObhQklbrXffCMzy-eE9p19KMmf9JMKAKn5d4\",\r\n    \"dishid\" : 9,\r\n    \"rating\" : 4,\r\n    \"review\" : \"This is review for Chicken.\",\r\n    \"give_rating\" : \"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/apis/apis.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"apis",
+						"apis.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
